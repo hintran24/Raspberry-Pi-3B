@@ -17,7 +17,7 @@ make install
 
 #Thêm đường dẫn vào PATH hệ thống
 nano ~/.bashrc
-export PATH=$PATH:/home/qemu-6.2.0/build 
+export PATH=$PATH:/home/hientran-23521621/qemu-6.2.0/build 
 source ~/.bashrc
 
 #Tải file launch.sh, kernel8.img, dtb từ GitHub bằng wget
