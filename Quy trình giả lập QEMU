@@ -84,3 +84,10 @@ pip install psutil py-cpuinfo tqdm
 #Thư viện matplotlib==3.5.3
 pip install matplotlib==3.5.3 --no-deps #Chức năng của lệnh tương tự như khi cài thư viện ultralytics-8.0.151
 
+#Thư viện torch-1.8.0 và torchvision-0.9.0
+pip3 install torch==1.8.0 -f https://torch.kmtea.eu/whl/stable.html
+pip3 install torchvision==0.9.0 -f https://torch.kmtea.eu/whl/stable.html
+
+#Thư viện opencv-python-headless=4.6.0.66
+pip install opencv-python-headless==4.6.0.66
+
