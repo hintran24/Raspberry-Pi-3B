@@ -1,0 +1,49 @@
+#Tải và giải nén file QEMU-6.2
+wget https://download.qemu.org/qemu-6.2.0.tar.xz
+tar -xvf qemu-6.2.0.tar.xz
+cd qemu-6.2.0
+
+#Cài các gói thư viện cần thiết
+sudo apt-get install build-essential zlib1g-dev pkg-config libglib2.0-dev \
+binutils-dev libboost-all-dev autoconf libtool libssl-dev libpixman-1-dev \
+python-capstone virtualenv ninja-build
+
+#Cấu hình và build
+mkdir build
+cd build
+./configure --target-list=aarch64-softmmu  
+make -j8
+make install
+
+#Thêm đường dẫn vào PATH hệ thống
+nano ~/.bashrc
+export PATH=$PATH:/home/qemu-6.2.0/build 
+source ~/.bashrc
+
+#Tải file launch.sh, kernel8.img, dtb từ GitHub bằng wget
+cd qemu-6.2.0
+wget https://raw.githubusercontent.com/farabimahmud/emulate-raspberry-pi3-in-qemu/main/launch.sh
+wget https://raw.githubusercontent.com/farabimahmud/emulate-raspberry-pi3-in-qemu/main/kernel8.img
+wget https://raw.githubusercontent.com/farabimahmud/emulate-raspberry-pi3-in-qemu/main/bcm2710-rpi-3-b-plus.dtb
+
+#Kích hoạt môi trường ảo 
+python3 -m venv venv
+source venv/bin/activate
+
+#Tải disk image (4GB) từ Google Drive
+pistall gdown
+sudo apt update
+sudo apt install python3-pip
+pip3 install gdown
+gdown https://drive.google.com/uc?id=19cPWTYIuFTxdRxrnRhw2qMevb4umpK_Hp in
+
+#Cấp quyền và thực thi launch.sh - bắt đầu giả lập Raspberry Pi 3B+
+chmod +x launch.sh
+./launch.sh
+
+#User và mật khẩu
+raspberrypi login : pi
+password : raspberry
+
+
+
