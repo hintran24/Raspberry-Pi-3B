@@ -31,7 +31,7 @@ python3 -m venv venv
 source venv/bin/activate
 
 #Tải disk image (4GB) từ Google Drive
-pistall gdown
+pip install gdown
 sudo apt update
 sudo apt install python3-pip
 pip3 install gdown
@@ -66,23 +66,23 @@ source yolov8env38/bin/activate
 
 #Thư viện numpy-1.24.4
 pip install --no-cache-dir numpy==1.24.4 -i https://pypi.org/simple
-sudo apt update && sudo apt install -y python3-dev python3-pip python3-setuptools python3-pil libjpeg-dev \
-libfreetype6-dev liblcms2-dev libopenjp2-7-dev libtiff5-dev libwebp-dev tk-dev tcl-dev
 
 #Thư viện pillow-10.4.0
-pip install --no-cache-dir --force-reinstall --upgrade pillow    #Đã bị lỗi khi thực hiện cài pillow nên sử dụng lệnh này để giúp tránh lỗi khi thư viện bị cài lỗi trước đó 
+sudo apt update && sudo apt install -y python3-dev python3-pip python3-setuptools python3-pil libjpeg-dev \
+libfreetype6-dev liblcms2-dev libopenjp2-7-dev libtiff5-dev libwebp-dev tk-dev tcl-dev
+pip install --no-cache-dir --force-reinstall --upgrade pillow      #Đã bị lỗi khi thực hiện cài pillow nên sử dụng lệnh này để giúp tránh lỗi khi thư viện bị cài lỗi trước đó 
 
 #Thư viện pyyaml-6.0.2
 pip install pyyaml
 
 #Thư viện ultralytics-8.0.151
-pip install ultralytics==8.0.151 --no-deps #Sử dụng lệnh này để tránh việc kéo các thư viện đã cài đặt về, tuy nhiên để có thể sử dụng thư viện ultralytics thì cần phải cài bổ sung các thư viện còn thiếu không được kéo về do sử dụng câu lệnh này
+pip install ultralytics==8.0.151 --no-deps   #Sử dụng lệnh này để tránh việc kéo các thư viện đã cài đặt về, tuy nhiên để có thể sử dụng thư viện ultralytics thì cần phải cài bổ sung các thư viện còn thiếu không được kéo về do sử dụng câu lệnh này
 
 #Thư viện psutil-7.0.0 py-cpuinfo-9.0.0 tqdm-4.67.1
 pip install psutil py-cpuinfo tqdm
 
 #Thư viện matplotlib==3.5.3
-pip install matplotlib==3.5.3 --no-deps #Chức năng của lệnh tương tự như khi cài thư viện ultralytics-8.0.151
+pip install matplotlib==3.5.3 --no-deps   #Chức năng của lệnh tương tự như khi cài thư viện ultralytics-8.0.151
 
 #Thư viện torch-1.8.0 và torchvision-0.9.0
 pip3 install torch==1.8.0 -f https://torch.kmtea.eu/whl/stable.html
