@@ -88,27 +88,19 @@ pip install matplotlib==3.5.3 --no-deps   #Chức năng của lệnh tương t�
 pip3 install torch==1.8.0 -f https://torch.kmtea.eu/whl/stable.html
 pip3 install torchvision==0.9.0 -f https://torch.kmtea.eu/whl/stable.html
 
-#Thư viện opencv-python-headless=4.6.0.66
-pip install opencv-python-headless==4.6.0.66                       #build từ gói .tar.gz
-pip3 install opencv-python-headless==4.8.1.78                     # wheel pre-build
+#Thư viện opencv-python-headless=4.6.0.66( cách câu lệnh đã thử để cài đặt OpenCV)
+pip install opencv-python-headless==4.6.0.66        #build từ gói .tar.gz
+pip3 install opencv-python-headless==4.8.1.78       # wheel pre-build
 pip install opencv-python-headless==4.5.1.48
-pip3 install --no-deps opencv-python-headless==4.6.0.66               # ko kéo thư viện 
+pip3 install --no-deps opencv-python-headless==4.6.0.66      #Không kéo theo các thư viện phụ thuộc 
 
-sudo apt-get update
-sudo apt-get install -y python3-opencv  #build sẵn 4.2.0 => ch thử
+wget https://github.com/Jeffersonlab/OpenCV-RPi/releases/download/v4.6.0/opencv_python_headless-4.6.0.66-cp38-cp38-linux_aarch64.whl   #bản wheel nhưng 404
 
-
-
-pip3 install --no-deps opencv-python-headless==4.6.0.66 # ko kéo thư viện
-
-tăng swap
-
-wget https://github.com/Jeffersonlab/OpenCV-RPi/releases/download/v4.6.0/opencv_python_headless-4.6.0.66-cp38-cp38-linux_aarch64.whl #bản wheel nhưng 404
-
-sử dụng piwheels
-
-
-
+#Thư viện pandas==1.5.3
 pip3 install pandas==1.5.3
+
+#Thư viện scipy==1.7.3
 pip3 install scipy==1.7.3
+
+#Thư viện seaborn==0.12.2
 pip3 install seaborn==0.12.2
