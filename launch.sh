@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 qemu-system-aarch64 \
     -M raspi3b \
     -cpu cortex-a72 \
@@ -11,5 +10,5 @@ qemu-system-aarch64 \
     -m 1G -smp 4 \
     -serial stdio \
     -usb -device usb-mouse -device usb-kbd \
-        -device usb-net,netdev=net0 \
-        -netdev user,id=net0,hostfwd=tcp::5555-:22 \
+    -device usb-net,netdev=net0 \
+    -netdev user,id=net0,dns=8.8.8.8,hostfwd=tcp::5555-:22
