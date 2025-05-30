@@ -11,4 +11,4 @@ qemu-system-aarch64 \
     -serial stdio \
     -usb -device usb-mouse -device usb-kbd \
     -device usb-net,netdev=net0 \
-    -netdev user,id=net0,dns=8.8.8.8,hostfwd=tcp::5555-:22
+    -netdev user,id=net0,hostfwd=tcp::5555-:22
